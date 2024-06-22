@@ -1,0 +1,35 @@
+<div class="aside">
+    <!-- <ul class="aside-nav">
+        <li class="title">Documentation</li>
+        <li>
+            <a href="#">Getting Started</a>
+        </li>
+        <li>
+            <a href="#">Using Timers</a>
+        </li>
+        <li>
+            <a href="#">Using Messages</a>
+        </li>
+        <li>
+            <a href="#">Sharing Timers</a>
+        </li>
+        <li>
+            <a href="#">Customization</a>
+        </li>
+    </ul> -->
+    <ul class="aside-nav">
+        @for (item of menu; track item) {
+            <li class="title">{{item.label}}</li>
+            @for (item of item.items; track item) {
+                <li >
+                    <a [routerLink]="item.routerLink" routerLinkActive="active">
+                        {{item.label}}
+                        @if(item.topic){
+                            <span>{{item.topic}}</span>
+                        }
+                    </a>
+                </li>
+            }
+        }
+    </ul>
+</div>

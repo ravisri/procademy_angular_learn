@@ -1,0 +1,14 @@
+<div class="container">
+    <app-search (searchTextChanged)="setSearchText($event)"></app-search>
+    
+</div>
+@if(productListComponent.selectedProduct){
+    <app-product-detail></app-product-detail>
+    }
+<app-product-list [searchText]="searchText" #productListComponent></app-product-list>
+
+
+    
+
+    
+

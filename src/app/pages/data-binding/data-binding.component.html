@@ -1,0 +1,30 @@
+<!-- <p>{{title}}</p>
+<p *ngIf="display">{{message}}</p>
+<button type="button" (click)="onClick()">click button</button> -->
+
+<div class="row g-2">
+    @for (item of product; track $index) {
+        <div class="col-md-4">
+            <div class="border h-100 w-100 p-3">
+                <img [src]="item.pImg" class="img-fluid"/>
+            <p>Name: {{item.name}}</p>
+            <p>Price: {{item.price}}</p>
+            <p>Color: {{item.color}}</p>
+            <p>Discount Price: {{ (item.price - (item.price * item.discount/100)).toFixed(1)   }}</p>
+            <p>{{item.inStock > 0 ? 'Only ' +  +item.inStock  + ' items left' : 'Not in Stock'}}</p>
+
+            <button class="btn btn-primary" [disabled]="!(item.inStock > 0)">Buy Now</button>
+
+            <div class="d-flex gap-2 mt-1 align-items-center">
+                <button type="button" (click)="decrement()" class="btn btn-sm btn-primary">-</button>
+                <span>{{addToCart}}</span>
+                <button type="button" (click)="increment()" class="btn btn-sm btn-primary">+</button>
+            </div>
+            <!-- <input type="text" [value]="name" (input)="onNameChange($event)" ><br/>
+             <p>name: {{name}}</p> <button type="button" >change name</button> -->
+        </div>
+        </div>
+    }
+</div>
+
+<!-- disabled, hidden, checked these are string interpolation not work -->

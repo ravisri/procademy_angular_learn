@@ -1,1 +1,92 @@
 /* You can add global styles to this file, and also import other style files */
+$enable-shadows: true;
+$prefix: "ravi-";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+$font-family-base:"DM Sans", sans-serif;
+@import "../node_modules/bootstrap/scss/bootstrap";
+@mixin ul-ol($type, $margin, $padding) {
+    list-style-type: $type;
+    margin: $margin;
+    padding: $padding;
+    }
+    @mixin transition($property:all, $duration:.25s, $style:ease-in-out){
+        transition-property: $property;
+        transition-duration: $duration;
+        transition-timing-function:$style;
+    }
+
+body, html{
+    height: 100%;
+}
+body{
+    font-family: $font-family-base;
+    display: flex;
+    flex-direction: column;
+}
+app-root, app-container{
+    display: flex;
+    flex-direction: column;
+    flex:1 1 auto
+}
+.aside{
+    width: 250px;
+    background: rgb(245, 245, 245);
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0 1rem 2rem;
+    border-right: solid 1px var(--border);
+    .aside-nav{
+        @include ul-ol(none,0,0);
+        // flex:1 1 auto;
+        display: flex;
+        flex-direction: column;
+        gap: .05rem;
+        li{
+            line-height: 1;
+            
+            &.title{
+                text-transform: uppercase;
+                padding: .5rem 1rem;
+                font-weight: $font-weight-bold;
+                color: var(--ravi-tertiary-color);
+                font-size: .8rem;
+            }
+            a{
+                padding: .4rem 1rem;
+                font-size: .95rem;
+                display: flex;
+                flex-direction: column;
+                color: $dark;
+                text-decoration: none;
+                font-weight: $font-weight-medium;
+                border:solid 1px transparent;
+                border-right: none;
+                border-radius: 5px 0 0 5px;
+                @include transition;
+                line-height: 1;
+                gap: .2rem;
+                span{
+                    font-size: .8rem;
+                    line-height: 1.15;
+                    color: var(--ravi-tertiary-color);
+                }
+                &.active{
+                    background: var(--ravi-body-bg);
+                    color: $primary;
+                    border-color: #e5e7eb;
+                }
+                &:hover{
+                    background: var(--ravi-body-bg);
+                    border-color: #e5e7eb;
+                }
+            }
+        }
+    }
+}
+
+.mh-120{
+    max-height: 120px;
+    object-fit:cover;
+    max-width: 100%;
+}

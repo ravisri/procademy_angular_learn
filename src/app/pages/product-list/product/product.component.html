@@ -1,0 +1,26 @@
+
+
+            
+    
+        @defer{
+        <div class="border h-100 w-100 " >
+        <figure class="text-center bg-light">
+            @if (product.productImageUrl) {
+                <img [src]="product.productImageUrl" class ="img-fluid mh-120" >
+                }@else if(product.productImageUrl !== null) {
+                <li> There are no products.</li>
+                }
+        </figure>
+        <div class="product-details px-2">
+            <p class="m-0 p-0 small text-muted">{{product.categoryName}}</p>
+            <h6>{{product.productShortName}}</h6>
+            <h5 class="fw-semibold">₹ {{product.productPrice}}</h5>
+        </div>
+        
+    </div>
+}@loading (after 100ms; minimum 1s) {
+    loading
+        }@placeholder (minimum 100ms) {
+}@error {
+    <p>Failed to load the calendar</p>
+}
