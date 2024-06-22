@@ -15,11 +15,7 @@ export class TwoWayDataBindingComponent {
 
   searchText:string = ''
 
-  constructor(){
-   
-  }
-
-  @ViewChild(ProductListComponent) header!: ProductListComponent;
+  @ViewChild('app-product-list') productListComponent!:ProductListComponent;
   
 
   setSearchText(value:string){

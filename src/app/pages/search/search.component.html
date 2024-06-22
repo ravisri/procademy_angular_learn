@@ -1,7 +1,7 @@
 <div class="input-group mb-3">
   <!-- (input)="updateSearchText($event)" (input)="onSearchTextChanged()" -->
     <input type="text" [value]="searchText"   class="form-control" placeholder="Recipient's username" #searchInput>
-    <button class="btn" [ngClass]="{'btn':true, 'btn-primary':searchText, 'btn-danger':!searchText}" (click)="updateSearchText(searchInput)" >Search</button>
+    <button class="btn" [ngClass]="{'btn':true, 'btn-primary':searchText, 'btn-danger':!searchText}" (click)="updateSearchText()" >Search</button>
     <!-- [disabled]="!searchText" -->
   </div>
   @if(searchText != ''){
