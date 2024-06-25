@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ProductListComponent } from '../product-list.component';
+import { Product } from '../Models/product';
 
 @Component({
   selector: 'app-product-detail',
@@ -8,6 +9,15 @@ import { ProductListComponent } from '../product-list.component';
   templateUrl: './product-detail.component.html',
   styleUrl: './product-detail.component.scss'
 })
-export class ProductDetailComponent {
-@Input() productListComp!:ProductListComponent;
+export class ProductDetailComponent implements OnInit{
+
+  @Input() productListComp!:ProductListComponent
+
+
+product:any;
+
+ngOnInit(): void {
+  this.product = this.productListComp.selectedProduct;
+}
+
 }

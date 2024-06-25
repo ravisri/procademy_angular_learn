@@ -1,0 +1,9 @@
+<div class="card">
+    <div class="card-body">
+        <h2>Infermation</h2>
+        <ng-content></ng-content>
+        <button class="btn btn-primary" (click)="onSytleParagraph()">Learn More</button>
+    </div>
+</div>
+
+<input type="text" [value]="inputVal" #searchInput class="form-control" (input)="onInputValChange()">

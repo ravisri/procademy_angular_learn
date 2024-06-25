@@ -1,0 +1,56 @@
+<h2>Learn Ng Template</h2>
+<ng-template #myTemplate>
+    <h3>This is a template</h3>
+    <p>This is example paragraph to understand ng-template</p>
+</ng-template>
+
+<!-- ngTemplateOutlet Directive -->
+
+<div *ngTemplateOutlet="myTemplate">
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Latest Arrival in Pupolar Brands 1</h3>
+            </div>
+            <div class="card-body">
+                <app-ng-content>
+                    <h3 class="h3-title">since you won't navigate anywhere if you simply type “cd”</h3>
+                    <button type="button" class="btn btn-primary">Click button 1</button>
+                </app-ng-content>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Latest Arrival in Pupolar Brands </h3>
+            </div>
+            <div class="card-body">
+                <app-ng-content>
+                    <h3 class="h3-title">since you won't navigate anywhere if you simply type “cd” 2</h3>
+                    <button type="button" class="btn btn-primary">Click button 2</button>
+                </app-ng-content>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Latest Arrival in Pupolar Brands 3</h3>
+            </div>
+            <div class="card-body">
+                <app-ng-content>
+                    <h3 class="h3-title">since you won't navigate anywhere if you simply type “cd”</h3>
+                    <button type="button" class="btn btn-primary">Click button 3</button>
+                </app-ng-content>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,10 @@
+<div>
+    <app-child  (inputValChange)="onInputValChange($event)">
+        <h4>Some Hedding</h4>
+        <p #para>
+            Type. cd.. into the prompt. After you press Enter, this command tells the program to navigate back to the previous folder. It's important you type the two dots, since you won't navigate anywhere if you simply type “cd” into the prompt.
+        </p>
+        <p>{{inputVal}}</p>
+    </app-child>
+    
+</div>
