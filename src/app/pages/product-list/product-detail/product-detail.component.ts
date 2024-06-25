@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { ProductListComponent } from '../product-list.component';
+import { AppHoverDirective } from '../../../CustomDirective/app-hover.directive';
 
 @Component({
   selector: 'app-product-detail',
   standalone: true,
-  imports: [],
+  imports: [AppHoverDirective],
   templateUrl: './product-detail.component.html',
   styleUrl: './product-detail.component.scss'
 })

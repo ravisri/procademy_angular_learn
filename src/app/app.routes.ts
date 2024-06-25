@@ -11,8 +11,18 @@ export const routes: Routes = [
                 loadComponent:() => 
                     import('./pages/data-binding/data-binding.component').then((m) => m.DataBindingComponent)
             },
+            {path:'custom-directive',
+                loadComponent:() => import('./pages/custom-attribute-directive/custom-attribute-directive.component').then((m) => m.CustomAttributeDirectiveComponent)
+            },
+            {path:'renderer2',
+                loadComponent:() => import('./pages/renderer2/renderer2.component').then((m) => m.Renderer2Component)
+            },
             {path:'two-way-binding',
                 loadComponent:() => import('./pages/two-way-data-binding/two-way-data-binding.component').then((m) => m.TwoWayDataBindingComponent)
+            },
+            {
+                path:'practice',
+                loadComponent:() => import('./pages/life-cycle-hooks/life-cycle-hooks.component').then((m) => m.LifeCycleHooksComponent)
             }
         ]
     }

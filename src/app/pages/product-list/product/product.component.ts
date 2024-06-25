@@ -1,10 +1,12 @@
 import { Component, Input } from '@angular/core';
 import { Product } from '../Models/product';
+import { HighlightsDirective } from '../../../CustomDirective/highlights.directive';
+import { DisableProductDirective } from '../../../CustomDirective/disable-product.directive';
 
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [],
+  imports: [HighlightsDirective, DisableProductDirective],
   templateUrl: './product.component.html',
   styleUrl: './product.component.scss'
 })

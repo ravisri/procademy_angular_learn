@@ -21,6 +21,24 @@ export const menu = [
         {
           label:'Component',
           routerLink:'component-directive'
+        },
+        {
+          label:'Custom Directive',
+          routerLink:'custom-directive'
+        },
+        {
+          label:'Renderer2',
+          routerLink:'renderer2'
+        }
+      ]
+    },
+    {
+      label:'Life Cycle Hooks',
+      routerLink:'',
+      items:[
+        {
+          label:'life Cycle Hooks',
+          routerLink:'practice'
         }
       ]
     },

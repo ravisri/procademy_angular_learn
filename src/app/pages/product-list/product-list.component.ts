@@ -3,11 +3,12 @@ import {ProductsService} from '../../services/products.service'
 import { ProductComponent } from './product/product.component';
 import { FilterComponent } from './filter/filter.component';
 import { Product } from './Models/product';
+import { DisableProductDirective } from '../../CustomDirective/disable-product.directive';
 
 @Component({
   selector: 'app-product-list',
   standalone: true,
-  imports: [ProductComponent, FilterComponent],
+  imports: [ProductComponent, FilterComponent, DisableProductDirective],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.scss'
 })

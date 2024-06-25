@@ -1,0 +1,21 @@
+<div class="container d-flex justify-content-center align-items-center p-5">
+    <div class="card">
+        <div class="card-body">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Username" #inputEl (focus)="0">
+                <button type="button" class="btn btn-primary" id="basic-addon1" (click)="onBtnClick(inputEl)">Submit</button>
+              </div>
+            <app-child-component [message]="message">
+                <p #temp class="temp">User has entered following text: {{message}}</p>
+            </app-child-component>
+        </div>
+    </div>
+    
+</div>
+
+
+<div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Username" [value]="textValue" appSampleDirective >
+    <!-- (focus)="logValue()" -->
+    <button type="button" class="btn btn-primary" id="basic-addon1" >Submit</button>
+</div>
