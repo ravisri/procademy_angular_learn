@@ -1,0 +1,19 @@
+<div class="row justify-content-center">
+    <div class="col-md-5">
+        <div class="row g-3">
+            <div class="col-12">
+                <input type="text" class="form-control" placeholder="First Name" #inputEl>
+            </div>
+            <div class="col-12">
+                <input type="text" class="form-control" placeholder="Middle Name" #inputEl>
+            </div>
+            <div class="col-12">
+                <input type="text" class="form-control" placeholder="Last Name" #inputEl>
+            </div>
+            <div class="col-12">
+                <button type="button" class="btn btn-primary" (click)="show()">Show Full Name</button>
+            </div>
+            <h3>{{fullname}}</h3>
+        </div>
+    </div>
+</div>

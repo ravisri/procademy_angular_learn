@@ -21,7 +21,7 @@ fruits:any;
 @Input()
 searchText:string = ''
 
-selectedProduct:any;
+selectedProduct:any; 
 
 selectedFilterRadio:string = 'all';
 
@@ -29,7 +29,6 @@ constructor(private productSrv:ProductsService){}
 
 ngOnInit(): void {
   this.loadAllProducts()
-  
 }
 
 loadAllProducts(){

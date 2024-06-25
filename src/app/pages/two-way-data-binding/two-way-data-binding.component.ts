@@ -16,7 +16,6 @@ export class TwoWayDataBindingComponent {
   searchText:string = ''
 
   @ViewChild('app-product-list') productListComponent!:ProductListComponent;
-  
 
   setSearchText(value:string){
     this.searchText = value
