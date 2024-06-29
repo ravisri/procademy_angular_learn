@@ -1,5 +1,81 @@
 <ul class="d-flex gap-2">
-    <li  [setBackground] ="{backColor:'red', textColor:'white'}">Male</li>
-    <li  [setBackground] ="{backColor:'green', textColor:'white'}">Nike</li>
-    <li  [setBackground] ="{backColor:'blue', textColor:'white'}">Runnings</li>
+    <li [setBackground]="{backColor:'red',  textColor:'white'}"  >Male</li>
+    <li  [setBackground]="{backColor:'yellow',  textColor:'red'}">Nike</li>
+    <li  [setBackground]="{backColor:'#ff1493',  textColor:'#030277'}">Runnings</li>
 </ul>
+
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" (click)="onHomeClick()">Home</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" (click)="onProfileClick()">Profile</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" (click)="onContactClick()">Contact</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" (click)="onDisabledClick()">Disabled</button>
+    </li>
+  </ul>
+  <div class="tab-content" id="myTabContent" [ngSwitch]="tab">
+    <div class="" *ngSwitchDefault="">
+        This is some placeholder content the Home tab's associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other .nav-powered navigation.
+    </div>
+    <div class="" *ngSwitchCase="'profile'">
+        This is some placeholder content the Profile tab's associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other .nav-powered navigation.
+    </div>
+    <div class="" *ngSwitchCase="'contact'">
+        This is some placeholder content the Contact tab's associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other .nav-powered navigation.
+    </div>
+    <div class="" *ngSwitchCase="'disabled'">
+        This is some placeholder content the Disabled tab's associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other .nav-powered navigation.
+    </div>
+  </div>
+
+
+
+<div class="d-none">
+<ng-container>
+    <h2>Custom class & style directive</h2>
+    <div [appClass]="{'appHighlight':true, 'app-container':true, 'appfont':true}">
+        <p>One of the main differences between javascript family with languages like java, c++, python is the management of null and undefined values.
+
+            Javascript is loosely types programming lanuage and the grandparent of all web scripting languages. But maintaing null, unidentified etc. is often frustrating to many.
+            
+            Here i have example of some utility methods to easily maintain and strictly check when a value is missing.</p>
+    </div>
+</ng-container>
+
+
+<div class="app-container"  [appStyle]="{backgroundColor:active ?'green':'red', color: 'white'}">
+    <p>One of the main differences between javascript family with languages like java, c++, python is the management of null and undefined values.
+
+        Javascript is loosely types programming lanuage and the grandparent of all web scripting languages. But maintaing null, unidentified etc. is often frustrating to many.
+        
+        Here i have example of some utility methods to easily maintain and strictly check when a value is missing.</p>
+</div>
+
+<button (click)="show()">Click button</button>
+<ng-template >
+</ng-template>
+    <div class="app-container" *appIf="10 > 5">
+        <p>One of the main differences between javascript family with languages like java, c++, python is the management of null and undefined values.
+    
+            Javascript is loosely types programming lanuage and the grandparent of all web scripting languages. But maintaing null, unidentified etc. is often frustrating to many.
+            
+            Here i have example of some utility methods to easily maintain and strictly check when a value is missing.</p>
+    </div>
+
+    <!-- [ngIf]="display"; [ngIfElse]="myTempVar" -->
+    
+
+
+<ng-template #myTempVar>
+<p>Here i have example of some utility methods to easily maintain and strictly check when a value is missing.</p>
+</ng-template>
+
+</div>
+
+
+

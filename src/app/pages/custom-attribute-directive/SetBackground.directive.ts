@@ -11,7 +11,7 @@ constructor(private element:ElementRef){
 
 ngOnInit(): void {
     this.element.nativeElement.style.backgroundColor = 'gray'
-this.element.nativeElement.style.color = 'white'
+this.element.nativeElement.style.color = 'lightgray'
 }
 
 }

@@ -9,7 +9,8 @@
 <div class="row g-3">
 @for (prod of prodArr; ; track $index) {
     @if (searchText === '' || prod.productShortName.toLowerCase().includes(searchText) ){
-    <div class="col-md-3" (click)="selectedProduct = prod" [disableProduct]="!prod.productImageUrl">
+    <div class="col-md-3" (click)="selectedProduct = prod"  [ngClass]="{'opacity-50':!prod.productImageUrl}">
+        <!-- [disableProduct]="!prod.productImageUrl" -->
         <!-- @if (selectedFilterRadio === 'all' || prod.categoryName === 'Bakery, Cakes & Dairy'.toString()) { -->
         
         <app-product [product]="prod" ></app-product>

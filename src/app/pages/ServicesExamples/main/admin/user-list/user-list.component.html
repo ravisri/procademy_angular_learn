@@ -1,0 +1,20 @@
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Plan</th>
+        <th>Status</th>
+    </tr>
+</thead>
+<tbody>
+    @for(user of userlist; track $index) {
+        <tr>
+            <td>{{user.name}}</td>
+            <td>{{user.gender}}</td>
+            <td>{{user.subType}}</td>
+            <td>{{user.status === 'Active' ? 'Yes' : 'No'}}</td>
+        </tr>
+    }
+</tbody>
+</table>

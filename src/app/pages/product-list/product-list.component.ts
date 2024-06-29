@@ -4,11 +4,12 @@ import { ProductComponent } from './product/product.component';
 import { FilterComponent } from './filter/filter.component';
 import { Product } from './Models/product';
 import { DisableProductDirective } from '../../CustomDirective/disable-product.directive';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-product-list',
   standalone: true,
-  imports: [ProductComponent, FilterComponent, DisableProductDirective],
+  imports: [ProductComponent, FilterComponent, DisableProductDirective, CommonModule],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.scss'
 })

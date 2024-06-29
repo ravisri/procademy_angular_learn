@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row justify-content-center my-4">
+        <div class="col-md-5">
+            <div class="row g-4">
+        <div class="col-md-6">
+            <input type="text" class="form-control" [(ngModel)]="name">
+        </div>
+        <div class="col-md-6">
+           <select class="form-select" [(ngModel)]="gender">
+            <option value="male">male</option>
+            <option value="female">female</option>
+           </select>
+        </div>
+        <div class="col-md-6">
+           <select class="form-select" [(ngModel)]="subType">
+            <option value="monthly">Monthly</option>
+            <option value="quaterly">Quaterly</option>
+            <option value="yearly">Yearly</option>
+           </select>
+        </div>
+        <div class="col-md-6">
+            <select class="form-select" [(ngModel)]="status">
+             <option value="monthly">Active</option>
+             <option value="quaterly">Inactive</option>
+            </select>
+         </div>
+         <div class="col-md-12 d-grid">
+            <button type="button" class="btn btn-primary d-grid" (click)="createNewUser()">Create</button>
+         </div>
+        </div>
+        </div>
+    </div>
+    <app-user-list></app-user-list>
+</div>

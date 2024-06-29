@@ -23,6 +23,14 @@ export const routes: Routes = [
             {
                 path:'practice',
                 loadComponent:() => import('./pages/life-cycle-hooks/life-cycle-hooks.component').then((m) => m.LifeCycleHooksComponent)
+            },
+            {
+                path:'services',
+                loadComponent:() => import('./pages/ServicesExamples/main/main.component').then((m) => m.MainComponent)
+            },
+            {
+                path:'services2',
+                loadComponent:() => import('./pages/ServicesExamples/main/admin/admin.component').then((m) => m.AdminComponent)
             }
         ]
     }

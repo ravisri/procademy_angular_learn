@@ -90,3 +90,21 @@ app-root, app-container{
     object-fit:cover;
     max-width: 100%;
 }
+
+.app-container{
+    margin: 1.25rem 2rem;
+    padding: 1rem 1.5rem;
+    p{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.appHighlight{
+    border: solid .25rem var(--ravi-primary);
+    background: var(--ravi-warning);
+}
+.appfont{
+    font-family: $font-family-base;
+    font-size: 1.1rem;
+}

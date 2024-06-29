@@ -50,5 +50,18 @@ export const menu = [
           routerLink:'product-list'
         }
       ]
+    },
+    {
+      label:'Services',
+      items:[
+        {
+          label:'Service Example',
+          routerLink:'services'
+        }, 
+        {
+          label:'Service Example 2',
+          routerLink:'services2'
+        }
+      ]
     }
   ]
