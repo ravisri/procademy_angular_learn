@@ -63,5 +63,22 @@ export const menu = [
           routerLink:'services2'
         }
       ]
+    },
+    {
+      label:'Observables',
+      items:[
+          {
+            label:'observable',
+            routerLink:'observable'
+          },
+          {
+            label:'observable 2',
+            routerLink:'observable-2'
+          },
+          {
+            label:'Unsubscribe',
+            routerLink:'unsubscribe'
+          },
+      ]
     }
   ]

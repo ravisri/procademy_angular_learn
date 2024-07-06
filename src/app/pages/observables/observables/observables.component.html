@@ -1,0 +1,17 @@
+<div class="container">
+    <h2>{{title}}</h2>
+    <ul class="list-group">
+    @for (x of data; track $index) {
+    <li class="list-group-item">
+        {{x}}
+    </li>
+}
+</ul>
+<button class="btn btn-primary" (click)="getAsyncData()">Get Data</button>
+
+<!-- <ul class="list-group" id="container">
+</ul>
+<button class="btn btn-primary" #createbtn>Create New Item</button> -->
+
+
+</div>

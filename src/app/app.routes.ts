@@ -1,4 +1,6 @@
 import { Routes } from '@angular/router';
+import { SubjectsComponent } from './pages/observables/subjects/subjects.component';
+import { UnsubscribeComponent } from './pages/observables/unsubscribe/unsubscribe.component';
 
 export const routes: Routes = [
     {path:'', pathMatch:'full', redirectTo:'dashboard'},
@@ -31,6 +33,19 @@ export const routes: Routes = [
             {
                 path:'services2',
                 loadComponent:() => import('./pages/ServicesExamples/main/admin/admin.component').then((m) => m.AdminComponent)
+            },
+            {
+                path:'observable',
+                loadComponent:() => import('./pages/observables/observables/observables.component').then((m) => m.ObservablesComponent)
+            },
+            {
+                path:'observable-2',
+                component:SubjectsComponent
+                // loadComponent:() => import('./pages/observables/subjects/subjects.component').then((m) => m.SubjectsComponent)
+            },
+            {
+                path:'unsubscribe',
+                component:UnsubscribeComponent
             }
         ]
     }
